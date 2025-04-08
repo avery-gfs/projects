@@ -48,7 +48,7 @@ Put these stations into a hashmap / dictionary so that we can look them up by na
 
 **Development step 4**
 
-Write a function that uses depth first search to find a path between two stations. Have the function return the path as a list of station objects.
+Write a function that uses depth-first search to find a path between two stations. Have the function return the path as a list of station objects.
 
 **Development step 5**
 
@@ -56,7 +56,7 @@ Print the names of the stations in the path found by the search algorithm. Displ
 
 **What are your non-goals for the project? (problems you aren't going to worry about solving)**
 
-I won't worry about avoiding infinite loops in the search algorithm. I'll make sure that the stations I include in the network don't form any loops that the search algorithm would have do deal with
+I won't worry about avoiding infinite loops in the search algorithm. I'll make sure that the stations I include in the network don't form any loops that the search algorithm would have to deal with.
 
 **What can we do to keep adding to the project once the initial work is complete?**
 
