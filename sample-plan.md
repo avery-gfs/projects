@@ -12,6 +12,8 @@ MBTA route planner
 
 **Describe what you'll be working on in detail**
 
+<img src="https://cdn.mbta.com/sites/default/files/media/2025-04/2025-04-06-subway-map.jpg" width="400">
+
 We will be making a program that finds a subway route between Boston subway stations. The user will enter a starting station name and a destination station name and the program will show the names of the stations in between and the total number of stops.
 
 **Why do you want to work on this project?**
