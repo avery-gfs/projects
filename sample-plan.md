@@ -8,13 +8,13 @@ Matt Zippin
 
 **Choose a title for your project (a few words that describe it)**
 
-MBTA route planner
+Metro route planner
 
 **Describe what you'll be working on in detail**
 
-<img src="https://cdn.mbta.com/sites/default/files/media/2025-04/2025-04-06-subway-map.jpg" width="400">
+<img src="https://www.stm.info/sites/all/modules/features/stm_metro/theme/images/map-interactive.png" width="500">
 
-We will be making a program that finds a subway route between Boston subway stations. The user will enter a starting station name and a destination station name and the program will show the names of the stations in between and the total number of stops.
+We will be making a program that finds a route between Montreal metro stations. The user will enter a starting station name and a destination station name and the program will show the names of the stations in between and the total number of stops.
 
 **Why do you want to work on this project?**
 
@@ -26,37 +26,39 @@ I will need to learn how to represent a transit map as a data structure and how 
 
 **Development step 1**
 
-Make a list of stations on the Red and Orange lines. For each station, write down the name of the station and the stations that are adjacent to it. For example:
+Choose a subsection of the subway system to start with. Make a list of stations connections in that section as a JSON object in the following format:
 
 ```
-stop name: Porter
-connects to: Davis, Harvard
-
-stop name: Downtown Crossing
-connects to: Park St, South Station, Chinatown, State
-
-... etc
+{
+	"beaubien": ["jean-talon", "rosemont"],
+	"d'iberville": ["fabre", "saint-michel"],
+	"fabre": ["d'iberville", "jean-talon"],
+	"jarry": ["cremazie", "jean-talon"],
+	"jean-talon": ["beaubien", "de-castelnau", "fabre", "jarry"],
+	"rosemont": ["beaubien", "laurier"],
+	"saint-michel": ["d'iberville"],
+}
 ```
 
 **Development step 2**
 
-Make a Station class to represent stations in the transit network, including connection information. Make a Station object for each station.
+Write code to load the JSON data into our program.
 
 **Development step 3**
 
-Put these stations into a hashmap / dictionary so that we can look them up by name. Write a function that takes the name of a station and returns the corresponding station object.
+Write code to prompt the user for a starting and ending station. Check to make sure the station names are valid.
 
 **Development step 4**
 
-Write a function that uses depth-first search to find a path between two stations. Have the function return the path as a list of station objects.
+Write a function that uses breadth-first search to find a route between two stations. Have the function return the path as a list of station objects.
 
 **Development step 5**
 
-Print the names of the stations in the path found by the search algorithm. Display the length of the route.
+Print the names of the stations in the route found by the search algorithm. Display the length of the route.
 
 **What are your non-goals for the project? (problems you aren't going to worry about solving)**
 
-I won't worry about avoiding infinite loops in the search algorithm. I'll make sure that the stations I include in the network don't form any loops that the search algorithm would have to deal with.
+I won't worry about suggesting alternative routes, I'll just go with the first route the search finds.
 
 **What can we do to keep adding to the project once the initial work is complete?**
 
