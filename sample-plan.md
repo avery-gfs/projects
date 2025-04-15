@@ -26,7 +26,7 @@ I will need to learn how to represent a transit map as a data structure and how 
 
 **Development step 1**
 
-Choose a subsection of the subway system to start with. Make a list of stations connections in that section as a JSON object in the following format:
+Choose a subsection of the subway system to start with. Make a hashmap / dictionary where the keys are station names and the values are lists of stations that each station connects to directly:
 
 ```
 {
@@ -42,24 +42,20 @@ Choose a subsection of the subway system to start with. Make a list of stations 
 
 **Development step 2**
 
-Write code to load the JSON data into our program.
+Write code to prompt the user for a starting and ending station. Check to make sure the station names are valid.
 
 **Development step 3**
 
-Write code to prompt the user for a starting and ending station. Check to make sure the station names are valid.
+Write a function that uses breadth-first search to find a route between two stations. Have the function return the path as a list of station objects.
 
 **Development step 4**
 
-Write a function that uses breadth-first search to find a route between two stations. Have the function return the path as a list of station objects.
+Print the names of the stations in the route found by the search algorithm. Display the length of the route.
 
 **Development step 5**
 
-Print the names of the stations in the route found by the search algorithm. Display the length of the route.
+Add more stations to the program.
 
 **What are your non-goals for the project? (problems you aren't going to worry about solving)**
 
 I won't worry about suggesting alternative routes, I'll just go with the first route the search finds.
-
-**What can we do to keep adding to the project once the initial work is complete?**
-
-Add more stations to the program.
